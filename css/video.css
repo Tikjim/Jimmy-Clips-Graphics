@@ -1,0 +1,729 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    align-items: center;
+    background-color: #0D0D0D;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    padding: 10px 30px;
+    background-color: rgb(26, 26, 36);
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    z-index: 99;
+    transition: all 0.3s ease-in-out;
+}
+
+header .btn a{
+    color: white;
+    font-family: "montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+}
+header .btn a:hover{
+                   background-color:#D4AF37;
+                   border-radius: 10px;
+                   scale: 1.1;
+}
+header .Quote{
+           background-color: #D4AF37;
+           color: white;
+           font-family: "montserrat", sans-serif;
+           font-weight: 500;
+           font-size: 15px;
+           padding: 10px 20px;
+           transition: all 0.3s ease-in-out;
+}
+header .Quote a{
+    color: white;
+}
+header .Quote a:hover{
+                
+                   scale: 1.1;
+}
+
+.heading{
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: #fff;
+    font-size: 27px;
+    text-align: center;
+}
+
+.heading h1{
+    padding: 100px 0 50px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 5px 5%;
+}
+
+/* Main Video */
+
+.container .main-video{
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.container .main-video video{
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+.container .main-video h3{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    color: #0D0D0D;
+    font-size: 20px;
+    padding-top: 15px;
+}
+
+/* Playlist */
+
+.container .video-list{
+    background: #fff;
+    border-radius: 10px;
+    height: 750px;
+    overflow-y: auto;
+}
+
+/* Scrollbar */
+
+.container .video-list::-webkit-scrollbar{
+    width: 8px;
+}
+
+.container .video-list::-webkit-scrollbar-track{
+    background: #ddd;
+}
+
+.container .video-list::-webkit-scrollbar-thumb{
+    background: #999;
+    border-radius: 50px;
+}
+
+.container .video-list .vid{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f7f7f7;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: .3s;
+    border: 1px solid rgba(0,0,0,.1);
+}
+
+.container .video-list .vid:hover{
+    background: #eee;
+}
+
+.container .video-list .vid.active{
+    background: #D4AF37;
+}
+
+.container .video-list .vid.active .title{
+    color: #fff;
+}
+
+.container .video-list .vid video{
+    width: 180px;
+    border-radius: 6px;
+}
+
+.container .video-list .vid .title{
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #333;
+}
+
+/*==================================================
+                REELS SECTION
+===================================================*/
+
+.reels-section{
+    width:100%;
+    padding:20px 5% 80px;
+}
+
+/*==========================
+    Layout
+==========================*/
+
+.reels-container{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f7f7f7;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: .3s;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+/*==========================
+      Main Reel
+==========================*/
+
+.main-reel{
+
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+}
+
+.main-reel video{
+
+    width:380px;
+
+    aspect-ratio:9/16;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    background:#000;
+
+    display:block;
+
+}
+
+.main-reel .title{
+
+    margin-top:18px;
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#111;
+}
+
+/*==========================
+      Playlist
+==========================*/
+
+.reel-list{
+
+    background:#fff;
+
+    border-radius:12px;
+
+    padding:12px;
+    width: 800px;
+
+    height:900px;
+
+    overflow-y:auto;
+
+}
+/* Scrollbar */
+
+.reel-list::-webkit-scrollbar{
+    width:8px;
+}
+
+.reel-list::-webkit-scrollbar-track{
+    background:#ececec;
+}
+
+.reel-list::-webkit-scrollbar-thumb{
+    background:#9d9d9d;
+    border-radius:20px;
+}
+
+/*====================================================
+            REELS GALLERY
+====================================================*/
+
+.reels-section{
+    width:100%;
+    padding:80px 5%;
+}
+
+.reels-gallery{
+
+   display: flex;
+    align-items: flex-start;
+     gap: 30px;
+    
+     width: 100%;
+     max-width: 1200px;
+     margin: auto;
+
+}
+
+/*====================================================
+        FEATURED REEL
+====================================================*/
+
+.featured-reel{
+
+    position:sticky;
+    top:30px;
+
+    width:600px;
+
+    background:#fff;
+
+    border-radius:15px;
+
+    padding:18px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+.featured-reel video{
+
+    width:100%;
+
+    aspect-ratio:9/16;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    display:block;
+
+    background:#000;
+
+}
+
+.featured-reel .title{
+
+    margin-top:18px;
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:32px;
+
+    font-weight:800;
+
+    color:#222;
+
+}
+
+/*====================================================
+        GRID
+====================================================*/
+
+.reels-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+
+    background:#fff;
+
+    width: 900px;
+
+    max-height:900px;
+
+    overflow-y: auto;
+
+
+    padding:30px;
+
+    border-radius:10px;
+
+}
+
+/*====================================================
+        SCROLLBAR
+====================================================*/
+
+.reels-grid::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.reels-grid::-webkit-scrollbar-track{
+
+    background:#ddd;
+
+    border-radius:20px;
+
+}
+
+.reels-grid::-webkit-scrollbar-thumb{
+
+    background:#999;
+
+    border-radius:20px;
+
+}
+
+/*====================================================
+        CARD
+====================================================*/
+
+.reel-card{
+
+    position:relative;
+
+    cursor:pointer;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    border:3px solid transparent;
+
+    background:#f7f7f7;
+
+}
+
+.reel-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.25);
+
+}
+
+.reel-card.active{
+
+    border-color:#D4AF37;
+
+}
+
+/*====================================================
+        VIDEO
+====================================================*/
+
+.reel-card video{
+
+    width:100%;
+
+    aspect-ratio:9/16;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+/*====================================================
+        OVERLAY
+====================================================*/
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    padding:18px;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.15),
+        rgba(0,0,0,.85)
+    );
+
+    transition:.3s;
+
+}
+
+.reel-card:hover .overlay{
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.05),
+        rgba(0,0,0,.75)
+    );
+
+}
+
+/*====================================================
+        PLAY ICON
+====================================================*/
+
+.play{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%) scale(.8);
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(10px);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#fff;
+
+    font-size:22px;
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.reel-card:hover .play{
+
+    opacity:1;
+
+    transform:translate(-50%,-50%) scale(1);
+
+}
+
+/*====================================================
+        TITLE
+====================================================*/
+
+.overlay .title{
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:16px;
+
+    color:#fff;
+
+    font-weight:600;
+
+    margin:0;
+
+}
+
+/* 1600px */
+
+@media (max-width:1600px){
+
+.container{
+    gap:15px;
+}
+.reels-gallery{
+
+    display: block;
+    max-width: 600px;
+
+}
+
+}
+
+/* 880px */
+
+@media (max-width:880px){
+
+.container{
+    grid-template-columns:1fr;
+}
+
+.container .video-list{
+    height:500px;
+}
+.reels-gallery{
+
+    grid-template-columns:1fr;
+
+}
+
+.featured-reel{
+
+    position:relative;
+
+    top:0;
+
+    max-width:420px;
+
+    margin:auto;
+
+}
+
+.reels-grid{
+
+    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    width: 600px;
+    max-height: 400px;
+    padding: 30px;
+
+}
+
+
+}
+
+/* 834px */
+
+@media (max-width:834px){
+
+.container .video-list .vid video{
+    width:160px;
+}
+.reels-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+}
+
+/* 786px */
+
+@media (max-width:786px){
+
+.container .video-list .vid{
+    gap:12px;
+}
+
+.container .video-list .vid .title{
+    font-size:16px;
+}
+.featured-reel .title{
+
+    font-size:26px;
+
+}
+
+}
+
+/* 720px */
+
+@media (max-width:720px){
+
+.container{
+    padding:20px;
+}
+
+.container .video-list .vid{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.container .video-list .vid video{
+    width:100%;
+}
+.reels-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:14px;
+
+}
+
+
+}
+
+/* 480px */
+
+@media (max-width:480px){
+
+.heading{
+    font-size:22px;
+}
+
+.container .main-video h3{
+    font-size:18px;
+}
+
+.container .video-list .vid .title{
+    font-size:15px;
+}
+
+.container .video-list{
+    height:400px;
+}
+.reels-section{
+
+    padding:50px 20px;
+
+}
+
+.featured-reel{
+
+    max-width:100%;
+
+}
+
+.reels-grid{
+
+            width: 400px;
+            max-height: 300px;
+
+}
+
+.featured-reel .title{
+
+    font-size:22px;
+
+}
+
+.overlay .title{
+
+    font-size:14px;
+
+}
+
+.play{
+
+    width:55px;
+
+    height:55px;
+
+    font-size:18px;
+
+}
+
+}
