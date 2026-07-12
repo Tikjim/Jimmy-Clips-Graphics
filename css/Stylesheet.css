@@ -8,6 +8,8 @@
 body{
     align-items: center;
     background-color: #0D0D0D;
+    width:100%;
+    overflow-x:hidden;
 }
 
 .autoshow{
@@ -117,7 +119,6 @@ li a{
 .topic{
     height: 100vh;
     width: 100%;
-    
     background-image: url("./hero-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -1189,6 +1190,8 @@ footer{
         padding: 30px 2%;
         text-align: left;
         color: white;
+        overflow: auto;
+        
     }
         .service .service-box .serive-1 {
         width: 200px;
@@ -1415,19 +1418,31 @@ footer{
         margin-top: 5px;
         font-size: 40px;
     }
+
+    .about-me-image{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+      }
         .about-me-image .details P {
-        width: 240px;
+        width:100%;
         font-size: 10px;
         color: white;
-    }
-        .about-me-image .details .box-mm {
-        margin-top: 10px;
-        width: 100%;
-    }
-        .about-me-image .img {
-        width: 300px;
-        height: 300px;
-    }
+       }
+        .about-me-image .details{
+        width:100%;
+        margin:20px 0 0;
+       }
+        .about-me-image .img{
+        width:100%;
+        max-width:300px;
+        height:auto;
+        }
+        .about-me-image .details{
+        width:100%;
+        margin:20px 0 0;
+        }
         .about-me-image .details .box-D-1 {
         margin-top: 10px;
         margin-left: 7px;
@@ -1452,7 +1467,7 @@ footer{
         font-size: 30px;
     }
     .service .prag P {
-        width: 400px;
+        width:auto;
         font-size: 11px;
     }
         .service .service-box .pricing-1 {
@@ -1489,17 +1504,31 @@ footer{
     }
 }
 @media(max-width: 430px){
+        .nav-menu {
+        width: 100%;
+    }
+
+
+
         .mainbox p {
         width: 60%;
     }
-        .about-me-image .img {
-        width: 370px;
-        height: 300px;
+        .about-me-image{
+    display:flex;
+    flex-direction:column;
+    width:100%;
     }
-        .about-me-image .details {
-        width: 55%;
-        margin-left: 40px;
-    }
+
+    .about-me-image .img{
+    width:100%;
+    max-width:300px;
+    height:auto;
+   }
+
+    .about-me-image .details{
+    width:100%;
+    margin:20px 0 0;
+   }
      .service .service-box .serive-1 {
     margin: 5px auto;
     width: 160px;
@@ -1511,7 +1540,7 @@ footer{
         padding: 10px 15px;
     }
         .service .service-box .serive-1 li {
-        width: 170px;
+        width: 100%;
         font-size: 10px;
         padding: 2px 30px;
     }
@@ -1549,9 +1578,52 @@ footer{
     width: 60%;
       }
     .footer-distributed h3 {
-        width: 600px;
+        width: 100%;
         display: flex;
         font-size: 25px;
          margin: 0;
       }
+}
+@media(max-width: 360px){
+    .mission h2 {
+    font-size: 27px;
+    
+}
+
+    .process-section h2 {
+    font-size: 35px;
+
+}
+
+        .why-us p {
+        font-size: 14px;
+    }
+    
+    .subtitle {
+    font-size: 20px;
+    }
+
+        .why-us h2 {
+        margin-top: 5px;
+        font-size: 27px;
+    }
+
+         .why-us .service-box {
+        margin: 37px auto;
+        width: 99%;
+    }
+        .why-us .service-box .serive-1 {
+        margin: 7px;
+        width: 120px;
+        height: 160px;
+        border-radius: 15px;
+    }
+        .why-us .serive-1 h2 {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+        .why-us .serive-1 P {
+        font-size: 11px;
+        padding: 7px 10px;
+    }
 }
