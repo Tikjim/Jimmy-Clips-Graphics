@@ -562,7 +562,7 @@ video{
 
 .subtitle{
     color:#d8a33d;
-    font-size:35px;
+    font-size:25px;
     font-family: "montserrat", sans-serif;
     text-transform:uppercase;
 }
@@ -950,6 +950,9 @@ footer{
         margin: 2% 8%;
         opacity: 0.8;
 }
+        .mission h2 {
+        font-size: 30px;
+    }
 .mainbox{
     position: absolute;
     top: 50%;
@@ -1566,7 +1569,7 @@ footer{
     }
         .why-us .service-box .serive-1 {
         margin: 10px;
-        width: 150px;
+        width: 140px;
         height: 160px;
         border-radius: 20px;
     }
